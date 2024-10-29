@@ -93,3 +93,23 @@ function renderBookList(books) {
     booksContainer.appendChild(bookElement);
   });
 }
+
+
+//FIREBASE
+// Configuración de Firebase
+// Configuración de Firebase para el proyecto Biblioteca NYTimes
+const firebaseConfig = {
+    apiKey: "AIzaSyC7-9JI5y-8HJ5di4TMhNfGm3jBs8Dz6ew",
+    authDomain: "biblioteca-nytimes-39f4b.firebaseapp.com",
+    projectId: "biblioteca-nytimes-39f4b",
+    storageBucket: "biblioteca-nytimes-39f4b.appspot.com",
+    messagingSenderId: "377643391478",
+    appId: "1:377643391478:web:abcdefghijklmno"
+  };
+  
+  // Inicializar Firebase
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+  
+  
