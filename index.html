@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html lang="es">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -30,6 +31,28 @@
     <!-- Contenedor para mostrar libros de una lista seleccionada -->
     <section id="books-container" style="display: none"></section>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biblioteca de Libros Más Vendidos</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore.js"></script>
+
+</head>  
+<body>
+  <header>
+    <h1>Biblioteca NYTimes</h1>  
+  </header>  
+  
+  <!-- Animación de carga -->
+  <div id="loading" class="spinner" style="display: none;"></div>
+  
+  <!-- Contenedor para las listas de libros -->
+  <main id="lists-container"></main>
+
+
     <!-- Contenedor para mostrar los favoritos del usuario -->
     <section id="favorites-container" style="display: none">
       <h2>Mis Favoritos</h2>
@@ -38,4 +61,8 @@
     <!-- Script principal -->
     <script src="./script.js"></script>
   </body>
+
+  <script src="/script.js"></script>
+</body>  
+
 </html>
