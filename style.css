@@ -1,25 +1,78 @@
-/* MEDIA QUERYS */
+/* Media Queries */
 @media (max-width: 600px) {
-    .list-item, .book-item {
+    .list-item {
         font-size: 0.9rem;  
         padding: 10px;
     }  
-}  
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    #lists-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .list-item {
+        font-size: 1rem; 
+    }
+}
+
+@media (min-width: 901px) {
+    #lists-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .list-item {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (max-width: 375px) { 
+    #lists-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .list-item {
+        font-size: 0.85rem; 
+    }
+}
+
 
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
+
 
 header {
-  text-align: center;
-  background-color: #333;
-  color: white;
-  padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
 }
 
-/* SPINNER */  
+
+#lists-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin: 0 10px;
+}
+
+
+.list-item {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; 
+}
+
+.list-item:hover {
+    transform: scale(1.02); 
+}
+
+/* Spinner */  
 .spinner {
     border: 4px solid rgba(0, 0, 0, 0.1);
     width: 36px;
@@ -27,34 +80,17 @@ header {
     border-radius: 50%;
     border-left-color: #09f;
     animation: spin 1s linear infinite;
-    display: block; /* Asegura que se muestre como bloque */
-    margin: 2rem auto; /* Centra el spinner */
+    display: block; 
+    margin: 2rem auto; 
 }
-  
+
 @keyframes spin {
     to { transform: rotate(360deg); }
 }
 
-/* Estilos para contenedores de listas y libros */
+/* Contenedores de listas y libros */
 #lists-container, #books-container {
     padding: 1rem;
-}
-
-/* Diseño de filas para listas */
-#lists-container {
-    display: grid; /* Usar grid para filas */
-    grid-template-columns: repeat(5, 1fr); /* 5 columnas de igual ancho */
-    gap: 10px; /* Espacio entre las filas y columnas */
-    margin: 0 10px; /* Margen del contenedor */
-}
-
-/* Elementos de lista */
-.list-item {
-    padding: 10px; /* Espacio interno en cada elemento */
-    border: 1px solid #ccc; /* Bordes para distinguir los elementos */
-    border-radius: 5px; /* Bordes redondeados */
-    background-color: #f9f9f9; /* Color de fondo */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto visual */
 }
 
 /* Contenedor de libros */
@@ -62,3 +98,4 @@ header {
     display: none; /* Ocultar el contenedor de libros inicialmente */
     margin: 0 10px; /* Margen del contenedor */
 }
+
