@@ -1,5 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="es">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca de Libros Más Vendidos</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Biblioteca NYTimes</h1>
+    </header>
+
+    <!-- Sección de autenticación -->
+    <section id="auth-section">
+      <input type="email" id="email" placeholder="Correo electrónico" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button onclick="signIn()">Iniciar sesión</button>
+      <button onclick="signUp()">Registrarse</button>
+      <button onclick="signOutUser()">Cerrar sesión</button>
+    </section>
+
+    <!-- Animación de carga -->
+    <div id="loading" class="spinner" style="display: none"></div>
+
+    <!-- Contenedor para las listas de libros -->
+    <main id="lists-container"></main>
+
+    <!-- Contenedor para mostrar libros de una lista seleccionada -->
+    <section id="books-container" style="display: none"></section>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,9 +52,17 @@
   <!-- Contenedor para las listas de libros -->
   <main id="lists-container"></main>
 
-  <!-- Contenedor para mostrar libros de una lista seleccionada -->
-  <section id="books-container" style="display: none;"></section>
+
+    <!-- Contenedor para mostrar los favoritos del usuario -->
+    <section id="favorites-container" style="display: none">
+      <h2>Mis Favoritos</h2>
+    </section>
+
+    <!-- Script principal -->
+    <script src="./script.js"></script>
+  </body>
 
   <script src="/script.js"></script>
 </body>  
+
 </html>
